@@ -20,6 +20,7 @@ function find(c){
     }
     return 1;
 }
+
 // Set up the API key
 let APIKey="92d82a3b29a1ea5d1d473a8ea103c692";
 
@@ -94,7 +95,6 @@ function currentWeather(city){
                 }
             }
         }
-
     });
 }
     // This function returns the UVIndex response
@@ -133,7 +133,6 @@ function forecast(cityid){
             $("#fTemp"+i).html(tempF+"&#8457");
             $("#fHumidity"+i).html(humidity+"%");
         }
-        
     });
 }
 
@@ -166,7 +165,6 @@ function loadlastCity(){
         city=sCity[i-1];
         currentWeather(city);
     }
-
 }
 
 // Clear the search history from the page
@@ -175,7 +173,6 @@ function clearHistory(event){
     sCity=[];
     localStorage.removeItem("cityname");
     document.location.reload();
-
 }
 
 // Click Handlers
